@@ -64,6 +64,7 @@ module CarrierWave
 
         def delete
           connection do |sftp|
+            binding.pry
             sftp.remove!(full_path)
           end
         rescue
